@@ -56,20 +56,35 @@ body {
 }
 .frequency{
   color: hsl(236, 100%, 87%);
-  opacity: 0.5;
-  font-weight: 400;
+  opacity: 0.6;
+  font-weight: 300;
   margin: 30px;
   margin-left: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 150px;
+}
+.frequency:hover{
+  color: white;
+  opacity: 1;
 }
 .item{
   grid-row: 2/5;
   background-color: hsl(235, 46%, 20%);
   border-radius: 15px;
+  display: flex;
+  margin-bottom: -2px;
+  flex-direction: column;
+  padding: 30px;
+  cursor: pointer;
+}
+.item:hover{
+  background-color: hsl(235, 29%, 38%);
 }
 #workItem-container{
   grid-column: 2;
   grid-row: 1;
-  grid-template-rows: 4;
+  grid-template-rows: 0.7fr 1fr 1fr 1fr;
   background-color: hsl(15, 100%, 70%);
   border-radius: 15px;
   display: grid;
@@ -78,7 +93,7 @@ body {
 #playItem-container{
   grid-column: 3;
   grid-row: 1;
-  grid-template-rows: 4;
+  grid-template-rows: 0.7fr 1fr 1fr 1fr;
   background-color: hsl(195, 74%, 62%);
   border-radius: 15px;
   display: grid;
@@ -87,7 +102,7 @@ body {
 #studyItem-container{
   grid-column: 4;
   grid-row: 1;
-  grid-template-rows: 4;
+  grid-template-rows: 0.7fr 1fr 1fr 1fr;
   background-color: hsl(348, 100%, 68%);
   border-radius: 15px;
   display: grid;
@@ -96,7 +111,7 @@ body {
 #exerciseItem-container{
   grid-column: 2;
   grid-row: 2;
-  grid-template-rows: 4;
+  grid-template-rows: 0.7fr 1fr 1fr 1fr;
   background-color: hsl(145, 58%, 55%);
   border-radius: 15px;
   display: grid;
@@ -105,7 +120,7 @@ body {
 #socialItem-container{
   grid-column: 3;
   grid-row: 2;
-  grid-template-rows: 4;
+  grid-template-rows: 0.7fr 1fr 1fr 1fr;
   background-color: hsl(264, 64%, 52%);
   border-radius: 15px;
   display: grid;
@@ -114,14 +129,40 @@ body {
 #selfCarelItem-container{
   grid-column: 4;
   grid-row: 2;
-  grid-template-rows: 4;
+  grid-template-rows: 0.7fr 1fr 1fr 1fr;
   background-color: hsl(43, 84%, 65%);
   border-radius: 15px;
   display: grid;
 }
+.titleBar{
+  grid-row: 2;
+  display: flex;
+  justify-content: space-between;
+  
+}
 .itemTitle{
   color: white;
   font-size: 18px;
-  margin: 30px;
+  box-sizing: content-box;
+}
+#iconImg {
+
+ 
+}
+.currentWeeklyTime{
+  grid-row: 3;
+  color: white;
+  font-size: 55px;
+  font-weight: 300;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.lastWeekTime{
+  color: hsl(236, 100%, 87%);
+  opacity: 0.9;
+  font-weight: 300;
+}
+.icon-work{
+  
 }
 
