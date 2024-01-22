@@ -68,6 +68,14 @@ body {
   color: white;
   opacity: 1;
 }
+.weeklyDashboardContainer{
+  grid-row: span 2;
+  grid-column: 2/5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+}
 .item{
   grid-row: 2/5;
   background-color: hsl(235, 46%, 20%);
@@ -82,7 +90,7 @@ body {
   background-color: hsl(235, 29%, 38%);
 }
 #workItem-container{
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 1;
   grid-template-rows: 0.7fr 1fr 1fr 1fr;
   background-color: hsl(15, 100%, 70%);
@@ -91,7 +99,7 @@ body {
 }
 
 #playItem-container{
-  grid-column: 3;
+  grid-column: 2;
   grid-row: 1;
   grid-template-rows: 0.7fr 1fr 1fr 1fr;
   background-color: hsl(195, 74%, 62%);
@@ -100,7 +108,7 @@ body {
 }
 
 #studyItem-container{
-  grid-column: 4;
+  grid-column: 3;
   grid-row: 1;
   grid-template-rows: 0.7fr 1fr 1fr 1fr;
   background-color: hsl(348, 100%, 68%);
@@ -109,7 +117,7 @@ body {
 }
 
 #exerciseItem-container{
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 2;
   grid-template-rows: 0.7fr 1fr 1fr 1fr;
   background-color: hsl(145, 58%, 55%);
@@ -118,7 +126,7 @@ body {
 }
 
 #socialItem-container{
-  grid-column: 3;
+  grid-column: 2;
   grid-row: 2;
   grid-template-rows: 0.7fr 1fr 1fr 1fr;
   background-color: hsl(264, 64%, 52%);
@@ -127,7 +135,7 @@ body {
 }
 
 #selfCarelItem-container{
-  grid-column: 4;
+  grid-column: 3;
   grid-row: 2;
   grid-template-rows: 0.7fr 1fr 1fr 1fr;
   background-color: hsl(43, 84%, 65%);
