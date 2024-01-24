@@ -54,6 +54,9 @@ body {
   margin-left: 40px;
   padding-right: 100px;
 }
+.itemContainer{
+  position: relative;
+}
 .frequency{
   color: hsl(236, 100%, 87%);
   opacity: 0.6;
@@ -65,6 +68,10 @@ body {
   margin-right: 150px;
 }
 .frequency:hover{
+  color: white;
+  opacity: 1;
+}
+.active{
   color: white;
   opacity: 1;
 }
@@ -157,7 +164,7 @@ body {
 
  
 }
-.currentWeeklyTime{
+.currentTime{
   grid-row: 3;
   color: white;
   font-size: 55px;
@@ -165,12 +172,11 @@ body {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.lastWeekTime{
+.lastTime{
   color: hsl(236, 100%, 87%);
   opacity: 0.9;
   font-weight: 300;
 }
-.icon-work{
-  
+.icon-cattegory{
+  position: absolute;
 }
-
