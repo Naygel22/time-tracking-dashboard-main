@@ -9,32 +9,32 @@ const items = {
   "Work": {
     title: "Work",
     image: "images/icon-work.svg",
-    backgroundColor: "hsl(15, 100%, 70%);"
+    backgroundColor: "hsl(15, 100%, 70%)"
   },
   "Play": {
     title: "Play",
     image: "images/icon-play.svg",
-    backgroundColor: "hsl(195, 74%, 62%);"
+    backgroundColor: "hsl(195, 74%, 62%)"
   },
   "Study": {
     title: "Study",
     image: "images/icon-study.svg",
-    backgroundColor: "hsl(348, 100%, 68%);"
+    backgroundColor: "hsl(348, 100%, 68%)"
   },
   "Exercise": {
     title: "Exercise",
     image: "images/icon-exercise.svg",
-    backgroundColor: "hsl(145, 58%, 55%);"
+    backgroundColor: "hsl(145, 58%, 55%)"
   },
   "Social": {
     title: "Social",
     image: "images/icon-social.svg",
-    backgroundColor: "hsl(264, 64%, 52%);"
+    backgroundColor: "hsl(264, 64%, 52%)"
   },
   "Self Care": {
     title: "Self Care",
     image: "images/icon-self-care.svg",
-    backgroundColor: "hsl(43, 84%, 65%);"
+    backgroundColor: "hsl(43, 84%, 65%)"
   }
 }
 
@@ -58,20 +58,16 @@ async function showTime(data, label){
   jsonData.forEach(element => {
     const title = element.title;
     const elementData = items[title];
-    // console.log(elementData)
+      console.log(elementData);
     const img = elementData.image;
     const color = elementData.backgroundColor;
     const currentTime = `${element.timeframes[data].current}hrs`;
     const lastTime = `${label} - ${element.timeframes[data].previous}hrs`;
-
-    // currentTime.textContent = `${selectedData.timeframes[data].current}hrs`;
-    // lastTime.textContent = `${label} - ${selectedData.timeframes[data].previous}hrs`;
-
     const createElement = createItem(img, title, currentTime, lastTime, color);
     timeDashboardContainer.appendChild(createElement);
     
   })
-  console.log(jsonData);
+     console.log(jsonData);
 }
 
 const frequencyWeekly = document.querySelector('#frequencyWeekly');
@@ -110,7 +106,7 @@ function createItem(img, title, currentTime, lastTime, color) {
   itemContainer.style.backgroundColor = color;
 
   const iconCattegory = document.createElement('img');
-  iconCattegory.classList.add('iconCattegory');
+  iconCattegory.classList.add('icon-cattegory');
   itemContainer.appendChild(iconCattegory);
   iconCattegory.src = img;
 
@@ -125,7 +121,7 @@ function createItem(img, title, currentTime, lastTime, color) {
   const itemTitle = document.createElement('p');
   itemTitle.classList.add('itemTitle');
   itemTitle.textContent = title;
-  titleBar.appendChild(itemTitle);
+  
   
   titleBar.innerHTML = itemTitle.innerHTML + '<img src="images/icon-ellipsis.svg" alt="icon-ellipsis" id="iconImg">';
   item.appendChild(titleBar);
