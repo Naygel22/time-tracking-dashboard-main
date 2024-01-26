@@ -102,60 +102,6 @@ body {
 .item:hover{
   background-color: hsl(235, 29%, 38%);
 }
-
-/* #workItem-container{
-  grid-column: 1;
-  grid-row: 1;
-  grid-template-rows: 0.7fr 1fr 1fr 1fr;
-  background-color: hsl(15, 100%, 70%);
-  border-radius: 15px;
-  display: grid;
-}
-
-#playItem-container{
-  grid-column: 2;
-  grid-row: 1;
-  grid-template-rows: 0.7fr 1fr 1fr 1fr;
-  background-color: hsl(195, 74%, 62%);
-  border-radius: 15px;
-  display: grid;
-}
-
-#studyItem-container{
-  grid-column: 3;
-  grid-row: 1;
-  grid-template-rows: 0.7fr 1fr 1fr 1fr;
-  background-color: hsl(348, 100%, 68%);
-  border-radius: 15px;
-  display: grid;
-}
-
-#exerciseItem-container{
-  grid-column: 1;
-  grid-row: 2;
-  grid-template-rows: 0.7fr 1fr 1fr 1fr;
-  background-color: hsl(145, 58%, 55%);
-  border-radius: 15px;
-  display: grid;
-}
-
-#socialItem-container{
-  grid-column: 2;
-  grid-row: 2;
-  grid-template-rows: 0.7fr 1fr 1fr 1fr;
-  background-color: hsl(264, 64%, 52%);
-  border-radius: 15px;
-  display: grid;
-}
-
-#selfCarelItem-container{
-  grid-column: 3;
-  grid-row: 2;
-  grid-template-rows: 0.7fr 1fr 1fr 1fr;
-  background-color: hsl(43, 84%, 65%);
-  border-radius: 15px;
-  display: grid;
-} */
 .titleBar{
   grid-row: 2;
   display: flex;
@@ -171,7 +117,6 @@ body {
 }
 #iconImg {
   height: 5px;
-  
 }
 
 .currentTime{
@@ -192,11 +137,12 @@ body {
   top: -10px;
   left: 160px;
 }
-#icon-exercise{
+.icon-exercise{
   position: absolute;
   top: 0px;
 }
 
+/*mobile view*/
 @media screen and (max-width: 768px) {
   .dashboardContainer {
     grid-template-columns: 1fr; 

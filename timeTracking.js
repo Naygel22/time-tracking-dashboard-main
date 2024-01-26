@@ -1,8 +1,5 @@
 const timeDashboardContainer = document.querySelector('#timeDashboardContainer');
 
-// const el1 = createItem("images/icon-work.svg", "Work", '20hrs', '15hrs', 'green');
-// timeDashboardContainer.appendChild(el1);
-
 showTime('weekly', 'Last Week');
 
 const items = {
@@ -44,17 +41,7 @@ async function showTime(data, label){
   const jsonData = await response.json();
 
   timeDashboardContainer.innerHTML = '';
-  // const currentTimes = document.querySelectorAll('.currentTime');
-  // const lastTimes = document.querySelectorAll('.lastTime');
-
-  // for (let i = 0; i < currentTimes.length; i++) {
-  //   const currentTime = currentTimes[i];
-  //   const lastTime = lastTimes[i];
-  //   const selectedData = jsonData[i];
-
-  //   currentTime.textContent = `${selectedData.timeframes[data].current}hrs`;
-  //   lastTime.textContent = `${label} - ${selectedData.timeframes[data].previous}hrs`;
-  // }
+  
   jsonData.forEach(element => {
     const title = element.title;
     const elementData = items[title];
@@ -110,6 +97,11 @@ function createItem(img, title, currentTime, lastTime, color) {
   itemContainer.appendChild(iconCattegory);
   iconCattegory.src = img;
 
+  //for green img
+  if(title === 'Exercise') {
+    iconCattegory.classList.add('icon-exercise')
+  }
+
   const item = document.createElement('div');
   item.classList.add('item');
   itemContainer.appendChild(item);
@@ -121,9 +113,13 @@ function createItem(img, title, currentTime, lastTime, color) {
   const itemTitle = document.createElement('p');
   itemTitle.classList.add('itemTitle');
   itemTitle.textContent = title;
+  titleBar.appendChild(itemTitle);
+
+  const iconImg = document.createElement('img');
+  iconImg.classList.add('iconImg');
+  iconImg.src = "images/icon-ellipsis.svg";
+  titleBar.appendChild(iconImg);
   
-  
-  titleBar.innerHTML = itemTitle.innerHTML + '<img src="images/icon-ellipsis.svg" alt="icon-ellipsis" id="iconImg">';
   item.appendChild(titleBar);
   
   const currentTimeElement = document.createElement('div');
